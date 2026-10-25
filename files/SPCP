@@ -1,0 +1,6 @@
+This plugin allows %PRODUCTNAME% to display the current player count of a Steam game using the Steam Web API.
+
+Hints:
+- Add the [b]Steam Players Online[/b] monitoring source to the %PRODUCTNAME% On-Screen Display to show the current player count.
+- Configure the Steam App ID, API request interval, and log folder in [b]SPCP.ini[/b], located in the same directory as the plugin DLL.
+- The player count is updated periodically according to the configured API request interval.
