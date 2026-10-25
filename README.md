@@ -1,6 +1,6 @@
 # Steam Player Count Plugin for MSI Afterburner
 
-Displays the live player count of any Steam game directly in your in-game overlay. SPCP is a monitoring plugin for MSI Afterburner that adds a real-time **Steam Player Count** sensor. The sensor appears in the on-screen display (the RivaTuner Statistics Server overlay) next to FPS, temperatures, and other hardware metrics.
+Displays the live player count of any Steam game directly in your in-game overlay. SPCP is a monitoring plugin for MSI Afterburner that adds a real-time Steam Player Count sensor. The sensor appears in the on-screen display (the RivaTuner Statistics Server overlay) next to FPS, temperatures, and other hardware metrics.
 
 ## Features
 
@@ -17,8 +17,8 @@ Displays the live player count of any Steam game directly in your in-game overla
 
 ## Installation
 
-1. Extract `SPCP.dll` and [`SPCP.ini`](SPCP/files/SPCP) to the `Plugins\Monitoring` folder of your MSI Afterburner installation. For example: `C:\Program Files (x86)\MSI Afterburner\Plugins\Monitoring`
-2. *(Optional)* Extract [`SPCP`](SPCP/files/SPCP) and place it in `Help\Plugins\Monitoring`. It adds a description of the plugin to the MSI Afterburner settings window.
+1. Extract `SPCP.dll` and [`SPCP.ini`](SPCP/files) to the `Plugins\Monitoring` folder of your MSI Afterburner installation. For example: `C:\Program Files (x86)\MSI Afterburner\Plugins\Monitoring`
+2. *(Optional)* Extract [`SPCP`](SPCP/files) and place it in `Help\Plugins\Monitoring`. It adds a description of the plugin to the MSI Afterburner settings window.
 3. Restart MSI Afterburner.
 
 ## Uninstalling
@@ -53,15 +53,15 @@ The AppID is the number in the game's Steam store URL. For example, in `https://
 Requires Visual Studio 2022 with the **.NET desktop development** workload and the **.NET Framework 4.8** targeting pack. Run the following from a **Developer Command Prompt for VS 2022**:
 
 ```
-git clone https://github.com/<NirisGear/>/<SPCP>.git
-cd <SPCP>\SPCP
+git clone https://github.com/NirisGear/SPCP.git
+cd SPCP
 msbuild SPCP.sln -restore -p:Configuration=Release
 ```
 
 ## Credits
 
-- Based on [LibreHardwareMonitorAfterburnerPlugin](https://github.com/ts-korhonen/LibreHardwareMonitorAfterburnerPlugin) by ts-korhonen.
-- Native exports provided by [DllExport](https://github.com/3F/DllExport) by Denis Kuzmin ([3F](https://github.com/3F)) and Robert Giesecke.
+- Based on [LibreHardwareMonitorAfterburnerPlugin](https://github.com/ts-korhonen/LibreHardwareMonitorAfterburnerPlugin) by ts-korhonen ([ts-korhonen]https://github.com/ts-korhonen).
+- Native exports provided by [DllExport](https://github.com/3F/DllExport) by Denis Kuzmin ([3F](https://github.com/3F))
 - Player counts and game names are provided by the Steam Web API and the Steam Store API. Please review the [Steam Web API Terms of Use](https://steamcommunity.com/dev/apiterms).
 
 ## Disclaimer
