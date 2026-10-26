@@ -8,8 +8,8 @@ SPCP is a monitoring plugin for MSI Afterburner that adds a real-time Steam Play
 ## Features
 
 - Live concurrent player count for any Steam game, shown in the MSI Afterburner overlay.
-- Game name resolved automatically from its AppID, or a custom label of your choice. (See [Limitations](#limitations)).
-- Configurable refresh interval. (See [Limitations](#limitations)).
+- Game name resolved automatically from its AppID, or a custom label of your choice (See [Limitations](#limitations)). 
+- Configurable refresh interval (See [Limitations](#limitations)).
 - Optional log file for troubleshooting.
 
 ## Requirements
@@ -19,8 +19,8 @@ SPCP is a monitoring plugin for MSI Afterburner that adds a real-time Steam Play
 
 ## Installation
 
-1. Extract `SPCP.dll` and [`SPCP.ini`](https://github.com/NirisGear/SPCP/blob/main/files/SPCP.ini) to `MSI Afterburner\Plugins\Monitoring`.
-2. *(Optional)* Extract [`SPCP`](https://github.com/NirisGear/SPCP/blob/main/files/SPCP) to `MSI Afterburner\Help\Plugins\Monitoring`. This adds a description of the plugin to the MSI Afterburner settings window.
+1. Copy `SPCP.dll` and [`SPCP.ini`](https://github.com/NirisGear/SPCP/blob/main/files/SPCP.ini) to `MSI Afterburner\Plugins\Monitoring`. For example, `C:\Program Files (x86)\MSI Afterburner\Plugins\Monitoring`.
+2. *(Optional)* Copy [`SPCP`](https://github.com/NirisGear/SPCP/blob/main/files/SPCP) to `MSI Afterburner\Help\Plugins\Monitoring`. This adds a description of the plugin to the MSI Afterburner settings window.
 3. Restart MSI Afterburner.
 
 ## Uninstalling
@@ -46,9 +46,9 @@ The AppID is the number in the game's Steam store URL. For example, in `https://
 
 ## Limitations
 
-- **Manual AppID configuration**: The game's Steam AppID must be specified in SPCP.ini. The plugin does not automatically detect which game are runing.
-- **Game name updates**: The game name is read only when MSI Afterburner starts. After changes AppId or Name, restart MSI Afterburner to update the displayed label. **The player count continues to update without restarting**.
-- **Steam statistics update frequency**: Steam updates player statistics according to its own schedule. A shorter refresh interval in SPCP does not guarantee newer data.
+- **Manual AppID configuration**: The game's Steam `AppID` must be specified in `SPCP.ini`. The plugin does not automatically detect the currently running game.
+- **Game name updates**: The game name is read only when MSI Afterburner starts. After changing `AppId` or `Name`, restart MSI Afterburner to update the displayed label. **The player count continues to update without restarting.**
+- **Steam statistics update frequency**: Steam updates player statistics according to its own schedule. A shorter refresh interval in `SPCP.ini` does not guarantee newer data.
 
 ## Build SPCP from source
 
@@ -60,7 +60,7 @@ cd SPCP
 msbuild SPCP.sln -t:Rebuild -p:Configuration=Release -p:Platform=x86
 ```
 
-After a successful build, the compiled `SPCP.dll` is generated in `SPCP\bin\x86\Release\net48`.
+After a successful build, `SPCP.dll` is generated in `SPCP\bin\x86\Release\net48\`.
 
 ## Credits
 
