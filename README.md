@@ -60,7 +60,7 @@ cd SPCP
 msbuild SPCP.sln -t:Rebuild -p:Configuration=Release -p:Platform=x86
 ```
 
-After a successful build, the compiled SPCP.dll is generated in SPCP\bin\x86\Release\net48.
+After a successful build, the compiled `SPCP.dll` is generated in `SPCP\bin\x86\Release\net48`.
 
 ## Credits
 
