@@ -31,10 +31,10 @@ Close MSI Afterburner, then delete:
 
 ## Getting Started
 
-1. Open `SPCP.ini` in a text editor and set **AppId** to the Steam AppID of your game (see [Finding an AppID](#finding-an-appid)).
-2. In MSI Afterburner, open **Settings → Monitoring** and click **[...]** next to **Active hardware monitoring graphs**.
+1. Open `SPCP.ini` in a text editor and set `AppId` to the Steam AppID of your game (see [Finding an AppID](#finding-an-appid)).
+2. In MSI Afterburner, open `Settings → Monitoring` and click `[...]` next to `Active hardware monitoring graphs`.
 3. In the list of plugin modules, tick the checkbox next to `SPCP.dll`.
-4. Select the **Steam Player Count** graph and enable **Show in On-Screen Display**.
+4. Select the `Steam Player Count` graph and enable `Show in On-Screen Display`.
 
 Changes to `SPCP.ini` are applied automatically while MSI Afterburner is running, except for the game name (see [Limitations](#limitations)).
 
@@ -44,8 +44,8 @@ The AppID is the number in the game's Steam store URL. For example, in `https://
 
 ## Limitations
 
-- **The AppID must be set manually** in `SPCP.ini`. The plugin does not detect the game you are playing.
-- **The game name only updates when MSI Afterburner starts.** Plugin names and labels are read once at startup; thereafter, MSI Afterburner accepts only numeric (float) values from the plugin. After changing `AppId` or `Name`, restart MSI Afterburner to update the game name label. **The player count itself updates without a restart**.
+- `The AppID must be set manually` in `SPCP.ini`. The plugin does not detect the game you are playing.
+- `The game name only updates when MSI Afterburner starts.` Plugin names and labels are read once at startup; thereafter, MSI Afterburner accepts only numeric (float) values from the plugin. After changing `AppId` or `Name`, restart MSI Afterburner to update the game name label. *`The player count itself updates without a restart`.
 - The count reflects what the Steam Web API reports and is refreshed only at the interval you configure.
 
 ## Build SPCP from source
