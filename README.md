@@ -2,14 +2,14 @@
 
 SPCP is a monitoring plugin for MSI Afterburner that adds a real-time Steam Player Count sensor.
 
-![SPCP displaying the Steam player count in the in-game overlay](https://github.com/NirisGear/SPCP/blob/main/assets/SPCP_overlay.jpg)
+![SPCP displaying the Steam player count in the in-game overlay](https://raw.githubusercontent.com/NirisGear/SPCP/refs/heads/main/assets/SPCP_overlay.jpg)
 
 
 ## Features
 
 - Live concurrent player count for any Steam game, shown in the MSI Afterburner overlay.
-- Game name resolved automatically from its AppID, or a custom label of your choice (See [Limitations](#limitations)). 
-- Configurable refresh interval (See [Limitations](#limitations)).
+- Game name resolved automatically from its AppID, or a custom label (see [Limitations](#limitations)). 
+- Configurable refresh interval (see [Limitations](#limitations)).
 - Optional log file for troubleshooting.
 
 ## Requirements
@@ -28,17 +28,17 @@ SPCP is a monitoring plugin for MSI Afterburner that adds a real-time Steam Play
 Close MSI Afterburner, then delete:
 
 - `SPCP.dll` and `SPCP.ini` from `MSI Afterburner\Plugins\Monitoring`.
-- `SPCP` from `MSI Afterburner\Help\Plugins\Monitoring` (if you installed it).
-- The log file, if you enabled logging.
+- `SPCP` from `MSI Afterburner\Help\Plugins\Monitoring` (if installed).
+- The log file, if logging was enabled.
 
 ## Getting Started
 
-1. Open `SPCP.ini` in a text editor and set `AppId` to the Steam AppID of your game (see [Finding an AppID](#finding-an-appid)).
+1. Open `SPCP.ini` in a text editor and set `AppId` to the Steam AppID of the target game (see [Finding an AppID](#finding-an-appid)).
 2. In MSI Afterburner, open `Settings → Monitoring` and click `[...]` next to `Active hardware monitoring graphs`.
 3. In the list of plugin modules, tick the checkbox next to `SPCP.dll`.
 4. Select the `Steam Player Count` graph and enable `Show in On-Screen Display`.
 
-Changes to `SPCP.ini` are applied automatically while MSI Afterburner is running, except for the game name. (See [Limitations](#limitations)).
+Changes to `SPCP.ini` are applied automatically while MSI Afterburner is running, except for the game name (see [Limitations](#limitations)).
 
 ### Finding an AppID
 
