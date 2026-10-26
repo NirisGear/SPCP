@@ -12,12 +12,12 @@ Displays the live player count of any Steam game directly in your in-game overla
 
 ## Requirements
 
-- MSI Afterburner with RivaTuner Statistics Server
-- An internet connection
+- MSI Afterburner with RivaTuner Statistics Server.
+- An internet connection.
 
 ## Installation
 
-1. Extract `SPCP.dll` and [`SPCP.ini`](https://github.com/NirisGear/SPCP/blob/main/files/SPCP.ini) to the `Plugins\Monitoring` folder of your MSI Afterburner installation. For example: `C:\Program Files (x86)\MSI Afterburner\Plugins\Monitoring`
+1. Extract `SPCP.dll` and [`SPCP.ini`](https://github.com/NirisGear/SPCP/blob/main/files/SPCP.ini) to the `Plugins\Monitoring` folder of your MSI Afterburner installation. For example: `C:\Program Files (x86)\MSI Afterburner\Plugins\Monitoring`.
 2. *(Optional)* Extract [`SPCP`](https://github.com/NirisGear/SPCP/blob/main/files/SPCP) and place it in `Help\Plugins\Monitoring`. It adds a description of the plugin to the MSI Afterburner settings window.
 3. Restart MSI Afterburner.
 
@@ -25,9 +25,9 @@ Displays the live player count of any Steam game directly in your in-game overla
 
 Close MSI Afterburner, then delete:
 
-- `SPCP.dll` and `SPCP.ini` from `MSI Afterburner\Plugins\Monitoring`
-- `SPCP` from `MSI Afterburner\Help\Plugins\Monitoring` (if you installed it)
-- The log file, if you enabled logging
+- `SPCP.dll` and `SPCP.ini` from `MSI Afterburner\Plugins\Monitoring`.
+- `SPCP` from `MSI Afterburner\Help\Plugins\Monitoring` (if you installed it).
+- The log file, if you enabled logging.
 
 ## Getting Started
 
@@ -45,7 +45,7 @@ The AppID is the number in the game's Steam store URL. For example, in `https://
 ## Limitations
 
 - **The AppID must be set manually** in `SPCP.ini`. The plugin does not detect the game you are playing.
-- **The game name only updates when MSI Afterburner starts.** Plugin names and labels are read once at startup; thereafter, MSI Afterburner accepts only numeric (float) values from the plugin. After changing 'AppId' or 'Name', restart MSI Afterburner to update the game name label. The player count itself updates without a restart.
+- **The game name only updates when MSI Afterburner starts.** Plugin names and labels are read once at startup; thereafter, MSI Afterburner accepts only numeric (float) values from the plugin. After changing `AppId` or `Name`, restart MSI Afterburner to update the game name label. The player count itself updates without a restart.
 - The count reflects what the Steam Web API reports and is refreshed only at the interval you configure.
 
 ## Build SPCP from source
@@ -61,7 +61,7 @@ msbuild SPCP.sln -t:Rebuild -p:Configuration=Release -p:Platform=x86
 ## Credits
 
 - Based on [LibreHardwareMonitorAfterburnerPlugin](https://github.com/ts-korhonen/LibreHardwareMonitorAfterburnerPlugin) by [ts-korhonen](https://github.com/ts-korhonen).
-- Native exports provided by [DllExport](https://github.com/3F/DllExport) by [3F](https://github.com/3F)
+- Native exports provided by [DllExport](https://github.com/3F/DllExport) by [3F](https://github.com/3F).
 - Player counts and game names are provided by the Steam Web API and the Steam Store API. Please review the [Steam Web API Terms of Use](https://steamcommunity.com/dev/apiterms).
 
 ## Disclaimer
