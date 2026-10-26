@@ -55,7 +55,7 @@ Requires Visual Studio 2022 with the **.NET desktop development** workload and t
 ```
 git clone https://github.com/NirisGear/SPCP.git
 cd SPCP
-msbuild SPCP.sln -restore -p:Configuration=Release
+msbuild SPCP.sln -t:Rebuild -p:Configuration=Release -p:Platform=x86
 ```
 
 ## Credits
