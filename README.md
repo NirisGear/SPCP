@@ -1,7 +1,7 @@
 # Steam Player Count Plugin for MSI Afterburner
 
 SPCP is a monitoring plugin for MSI Afterburner that adds a real-time Steam Player Count sensor.
-![SPCP displaying the Steam player count in the in-game overlay](https://github.com/NirisGear/SPCP/assets/SPCP_overlay.jpg)
+![SPCP displaying the Steam player count in the in-game overlay](https://github.com/NirisGear/SPCP/blob/main/assets/SPCP_overlay.jpg)
 
 
 ## Features
