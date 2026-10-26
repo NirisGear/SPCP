@@ -52,11 +52,12 @@ The AppID is the number in the game's Steam store URL. For example, in `https://
 
 ## Build SPCP from source
 
-Requires Visual Studio 2022 with the .NET desktop development workload and the .NET Framework 4.8 targeting pack. Run the following from a Developer Command Prompt for VS 2022:
+Requires Microsoft Visual Studio 2026 with the .NET desktop development workload and the .NET Framework 4.8 targeting pack. Run the following in Developer Command Prompt for VS:
 
 ```
 git clone https://github.com/NirisGear/SPCP.git
 cd SPCP
+dotnet restore SPCP.sln
 msbuild SPCP.sln -t:Rebuild -p:Configuration=Release -p:Platform=x86
 ```
 
