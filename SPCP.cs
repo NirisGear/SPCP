@@ -126,6 +126,10 @@ namespace SPCP
                 DateTime now = DateTime.UtcNow;
                 ReloadSettingsIfNeeded(now);
 
+                // Plugin disabled in SPCP.ini: show the neutral group name.
+                if (!Settings.EnablePlugin)
+                    return "Steam";
+
                 string name = (Settings.Name ?? "auto").Trim();
 
                 // Name set manually in SPCP.ini.

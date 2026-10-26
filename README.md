@@ -60,8 +60,8 @@ msbuild SPCP.sln -restore -p:Configuration=Release
 
 ## Credits
 
-- Based on [LibreHardwareMonitorAfterburnerPlugin](https://github.com/ts-korhonen/LibreHardwareMonitorAfterburnerPlugin) by ([ts-korhonen](https://github.com/ts-korhonen)).
-- Native exports provided by [DllExport](https://github.com/3F/DllExport) by ([3F](https://github.com/3F))
+- Based on [LibreHardwareMonitorAfterburnerPlugin](https://github.com/ts-korhonen/LibreHardwareMonitorAfterburnerPlugin) by [ts-korhonen](https://github.com/ts-korhonen).
+- Native exports provided by DllExport](https://github.com/3F/DllExport by [3F](https://github.com/3F)
 - Player counts and game names are provided by the Steam Web API and the Steam Store API. Please review the [Steam Web API Terms of Use](https://steamcommunity.com/dev/apiterms).
 
 ## Disclaimer
