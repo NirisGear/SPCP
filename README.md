@@ -45,8 +45,8 @@ The AppID is the number in the game's Steam store URL. For example, in `https://
 ## Limitations
 
 - `The AppID must be set manually` in `SPCP.ini`. The plugin does not detect the game you are playing.
-- `The game name only updates when MSI Afterburner starts.` Plugin names and labels are read once at startup; thereafter, MSI Afterburner accepts only numeric (float) values from the plugin. After changing `AppId` or `Name`, restart MSI Afterburner to update the game name label. *`The player count itself updates without a restart`.
-- The count reflects what the Steam Web API reports and is refreshed only at the interval you configure.
+- `The game name only updates when MSI Afterburner starts`. Plugin names and labels are read once at startup; thereafter, MSI Afterburner accepts only numeric (float) values from the plugin. After changing `AppId` or `Name`, restart MSI Afterburner to update the game name label. `The player count itself updates without a restart`.
+- `Steam backend updates player statistics on its own internal schedule`, so setting an excessively short refresh interval in the plugin will not fetch newer data any faster.
 
 ## Build SPCP from source
 
