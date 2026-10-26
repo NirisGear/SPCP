@@ -17,8 +17,8 @@ Displays the live player count of any Steam game directly in your in-game overla
 
 ## Installation
 
-1. Extract `SPCP.dll` and [`SPCP.ini`](SPCP/files) to the `Plugins\Monitoring` folder of your MSI Afterburner installation. For example: `C:\Program Files (x86)\MSI Afterburner\Plugins\Monitoring`
-2. *(Optional)* Extract [`SPCP`](SPCP/files) and place it in `Help\Plugins\Monitoring`. It adds a description of the plugin to the MSI Afterburner settings window.
+1. Extract `SPCP.dll` and [`SPCP.ini`](https://github.com/NirisGear/SPCP/blob/main/files/SPCP.ini) to the `Plugins\Monitoring` folder of your MSI Afterburner installation. For example: `C:\Program Files (x86)\MSI Afterburner\Plugins\Monitoring`
+2. *(Optional)* Extract [`SPCP`](https://github.com/NirisGear/SPCP/blob/main/files/SPCP) and place it in `Help\Plugins\Monitoring`. It adds a description of the plugin to the MSI Afterburner settings window.
 3. Restart MSI Afterburner.
 
 ## Uninstalling
