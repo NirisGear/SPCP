@@ -1,13 +1,14 @@
 # Steam Player Count Plugin for MSI Afterburner
 
-Displays the live player count of any Steam game directly in your in-game overlay. SPCP is a monitoring plugin for MSI Afterburner that adds a real-time Steam Player Count sensor. The sensor appears in the on-screen display (the RivaTuner Statistics Server overlay) next to FPS, temperatures, and other hardware metrics.
+SPCP is a monitoring plugin for MSI Afterburner that adds a real-time Steam Player Count sensor.
+![SPCP displaying the Steam player count in the in-game overlay](https://github.com/NirisGear/SPCP/assets/SPCP_overlay.jpg)
+
 
 ## Features
 
 - Live concurrent player count for any Steam game, shown in the MSI Afterburner overlay.
-- Game name resolved automatically from its AppID, or a custom label of your choice.
-- Configurable refresh interval; most settings are reloaded on the fly, with no restart.
-- Lightweight: one small request every few minutes. If a request fails, the last valid value stays on screen.
+- Game name resolved automatically from its AppID, or a custom label of your choice. (See [Limitations](#limitations)).
+- Configurable refresh interval. (See [Limitations](#limitations)).
 - Optional log file for troubleshooting.
 
 ## Requirements
@@ -17,8 +18,8 @@ Displays the live player count of any Steam game directly in your in-game overla
 
 ## Installation
 
-1. Extract `SPCP.dll` and [`SPCP.ini`](https://github.com/NirisGear/SPCP/blob/main/files/SPCP.ini) to the `Plugins\Monitoring` folder of your MSI Afterburner installation. For example: `C:\Program Files (x86)\MSI Afterburner\Plugins\Monitoring`.
-2. *(Optional)* Extract [`SPCP`](https://github.com/NirisGear/SPCP/blob/main/files/SPCP) and place it in `Help\Plugins\Monitoring`. It adds a description of the plugin to the MSI Afterburner settings window.
+1. Extract `SPCP.dll` and [`SPCP.ini`](https://github.com/NirisGear/SPCP/blob/main/files/SPCP.ini) to `MSI Afterburner\Plugins\Monitoring`.
+2. *(Optional)* Extract [`SPCP`](https://github.com/NirisGear/SPCP/blob/main/files/SPCP) to `MSI Afterburner\Help\Plugins\Monitoring`. This adds a description of the plugin to the MSI Afterburner settings window.
 3. Restart MSI Afterburner.
 
 ## Uninstalling
@@ -36,7 +37,7 @@ Close MSI Afterburner, then delete:
 3. In the list of plugin modules, tick the checkbox next to `SPCP.dll`.
 4. Select the `Steam Player Count` graph and enable `Show in On-Screen Display`.
 
-Changes to `SPCP.ini` are applied automatically while MSI Afterburner is running, except for the game name (see [Limitations](#limitations)).
+Changes to `SPCP.ini` are applied automatically while MSI Afterburner is running, except for the game name. (See [Limitations](#limitations)).
 
 ### Finding an AppID
 
@@ -44,9 +45,9 @@ The AppID is the number in the game's Steam store URL. For example, in `https://
 
 ## Limitations
 
-- `The AppID must be set manually` in `SPCP.ini`. The plugin does not detect the game you are playing.
-- `The game name only updates when MSI Afterburner starts`. Plugin names and labels are read once at startup; thereafter, MSI Afterburner accepts only numeric (float) values from the plugin. After changing `AppId` or `Name`, restart MSI Afterburner to update the game name label. `The player count itself updates without a restart`.
-- `Steam backend updates player statistics on its own internal schedule`, so setting an excessively short refresh interval in the plugin will not fetch newer data any faster.
+- **Manual AppID configuration**: The game's Steam AppID must be specified in SPCP.ini. The plugin does not automatically detect which game are runing.
+- **Game name updates**: The game name is read only when MSI Afterburner starts. After changes AppId or Name, restart MSI Afterburner to update the displayed label. **The player count continues to update without restarting**.
+- **Steam statistics update frequency**: Steam updates player statistics according to its own schedule. A shorter refresh interval in SPCP does not guarantee newer data.
 
 ## Build SPCP from source
 
@@ -57,6 +58,8 @@ git clone https://github.com/NirisGear/SPCP.git
 cd SPCP
 msbuild SPCP.sln -t:Rebuild -p:Configuration=Release -p:Platform=x86
 ```
+
+After a successful build, the compiled SPCP.dll is generated in SPCP\bin\x86\Release\net48.
 
 ## Credits
 

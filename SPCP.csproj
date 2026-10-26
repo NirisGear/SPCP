@@ -1,15 +1,17 @@
+
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
     <Platforms>AnyCPU;x86</Platforms>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-	<DebugType>full</DebugType>
+    <DebugType>full</DebugType>
   </PropertyGroup>
+
   <PropertyGroup>
     <DllExportIdent>6CC8D45A-538F-458C-B639-96ED7FBE0D58</DllExportIdent>
     <DllExportMetaLibName>DllExport.dll</DllExportMetaLibName>
     <DllExportNamespace>System.Runtime.InteropServices</DllExportNamespace>
-	<DllExportClrTypes>None</DllExportClrTypes>
+    <DllExportClrTypes>None</DllExportClrTypes>
     <DllExportDDNSCecil>false</DllExportDDNSCecil>
     <PlatformTarget>x86</PlatformTarget>
     <DllExportOrdinalsBase>1</DllExportOrdinalsBase>
@@ -29,6 +31,7 @@
     <DllExportPostProcType>0</DllExportPostProcType>
     <DllExportDir>$(MSBuildProjectDirectory)\</DllExportDir>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="DllExport">
       <Version>1.8.1</Version>
@@ -36,15 +39,34 @@
       <Wz>1</Wz>
     </PackageReference>
   </ItemGroup>
+
   <ImportGroup Label=".NET DllExport">
-    <Import Project="$(DllExportDir)packages\DllExport.1.8.1\tools\net.r_eg.DllExport.targets" Condition="Exists($([MSBuild]::Escape('$(DllExportDir)packages\DllExport.1.8.1\tools\net.r_eg.DllExport.targets')))" Label="8337224c9ad9e356" />
+    <Import
+      Project="$(DllExportDir)packages\DllExport.1.8.1\tools\net.r_eg.DllExport.targets"
+      Condition="Exists($([MSBuild]::Escape('$(DllExportDir)packages\DllExport.1.8.1\tools\net.r_eg.DllExport.targets')))"
+      Label="8337224c9ad9e356" />
   </ImportGroup>
+
   <Target Name="DllExportRestorePkg" BeforeTargets="PrepareForBuild">
-    <Error Condition="'$(DllExportNoRestore)'!='true' And !Exists('$(DllExportDir)DllExport.bat')" Text="DllExport.bat was not found in $(DllExportDir); https://github.com/3F/DllExport" />
-    <Exec Condition="'$(DllExportNoRestore)'!='true' And ('$(DllExportModImported)'!='true' Or !Exists('$(DllExportDir)packages\DllExport.1.8.1\tools\net.r_eg.DllExport.targets') Or !Exists('$(DllExportDir)packages\DllExport.1.8.1\gcache')) And Exists('$(DllExportDir)DllExport.bat')" Command=".\DllExport.bat  -action Restore" WorkingDirectory="$(DllExportDir)" />
-    <MSBuild Condition="'$(DllExportModImported)'!='true'" Projects="$(DllExportDir)packages\DllExport.1.8.1\tools\net.r_eg.DllExport.targets" Targets="DllExportMetaXBaseTarget" Properties="TargetFramework=$(TargetFramework)">
-      <Output TaskParameter="TargetOutputs" PropertyName="DllExportMetaXBase" />
+    <Error
+      Condition="'$(DllExportNoRestore)'!='true' And !Exists('$(DllExportDir)DllExport.bat')"
+      Text="DllExport.bat was not found in $(DllExportDir); https://github.com/3F/DllExport" />
+
+    <Exec
+      Condition="'$(DllExportNoRestore)'!='true' And ('$(DllExportModImported)'!='true' Or !Exists('$(DllExportDir)packages\DllExport.1.8.1\tools\net.r_eg.DllExport.targets') Or !Exists('$(DllExportDir)packages\DllExport.1.8.1\gcache')) And Exists('$(DllExportDir)DllExport.bat')"
+      Command=".\DllExport.bat  -action Restore"
+      WorkingDirectory="$(DllExportDir)" />
+
+    <MSBuild
+      Condition="'$(DllExportModImported)'!='true'"
+      Projects="$(DllExportDir)packages\DllExport.1.8.1\tools\net.r_eg.DllExport.targets"
+      Targets="DllExportMetaXBaseTarget"
+      Properties="TargetFramework=$(TargetFramework)">
+      <Output
+        TaskParameter="TargetOutputs"
+        PropertyName="DllExportMetaXBase" />
     </MSBuild>
+
     <ItemGroup>
       <Reference Include="DllExport, PublicKeyToken=8337224c9ad9e356">
         <HintPath>$(DllExportDir)packages\DllExport.1.8.1\gcache\$(DllExportMetaXBase)\$(DllExportNamespace)\$(DllExportMetaLibName)</HintPath>
@@ -53,7 +75,18 @@
       </Reference>
     </ItemGroup>
   </Target>
-  <Target Name="DllExportRPkgDynamicImport" BeforeTargets="PostBuildEvent" DependsOnTargets="GetFrameworkPaths" Condition="'$(DllExportModImported)'!='true' And '$(DllExportRPkgDyn)'!='false'">
-    <MSBuild BuildInParallel="true" UseResultsCache="true" Projects="$(MSBuildProjectFullPath)" Properties="Configuration=$(Configuration);DllExportRPkgDyn=true" Targets="Build" />
+
+  <Target
+    Name="DllExportRPkgDynamicImport"
+    BeforeTargets="PostBuildEvent"
+    DependsOnTargets="GetFrameworkPaths"
+    Condition="'$(DllExportModImported)'!='true' And '$(DllExportRPkgDyn)'!='false'">
+
+    <MSBuild
+      BuildInParallel="true"
+      UseResultsCache="true"
+      Projects="$(MSBuildProjectFullPath)"
+      Properties="Configuration=$(Configuration);DllExportRPkgDyn=true"
+      Targets="Build" />
   </Target>
 </Project>
